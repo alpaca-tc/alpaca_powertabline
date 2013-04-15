@@ -1,0 +1,72 @@
+*alpaca_powerlinetabline.txt* タグラインをpowerline化します。
+
+Version: 0.1.0
+Author: Ishii Hiroyuki<alprhcp666@gmail.com>
+
+==============================================================================
+目次                                            *alpaca_powertabline-contents*
+概要                                            |alpaca_powertabline-introduction|
+オプション                                      |alpaca_powertabline-options|
+設定                                            |alpaca_powertabline-settings|
+設定例                                          |alpaca_powertabline-examples|
+更新履歴                                        |alpaca_powertabline-changelog|
+
+==============================================================================
+概要                                             *alpaca_powerlinetabline-introduction*
+
+*alpaca_powertabline* はvimのタグラインをpowerline化します。
+
+要件:
+- Vim 7.2 以降
+
+==============================================================================
+オプション                                       *alpaca_powerlinetabline-options*
+
+1. |g:alpaca_powertabline_enable|
+        1を設定すると、powertablineを有効にします。
+        default: '0'
+2. |g:alpaca_powertabline_sep1|
+        powertablineの各タブの末尾の文字になります。
+        default:  ' '
+3. |g:alpaca_powertabline_sep2|
+        powertablineの各タブの区切り文字になります。
+        default:  '  '
+4. |g:alpaca_powertabline_colors|
+        powerlineの配色になります。
+        base: タブライン全体の設定
+        sel: currentTabの設定
+        passive: currentTab以外のtabの設定
+
+        それぞれ、bgが背景色、fgが文字色です。
+        CUI上で表現出来る色については、(こちら)[https://gist.github.com/5387735]
+        のスクリプトで確認してください。
+
+        default: {
+                \   "base" : {
+                \     "bg" : 240,
+                \     "fg" : 255,
+                \   },
+                \   "sel" : {
+                \     "bg": 75,
+                \     "fg": 255,
+                \   },
+                \   "passive": {
+                \     "bg": 236,
+                \     "fg": 245,
+                \   },
+                \ })
+
+==============================================================================
+設定例                                     *alpaca_powerlinetabline-examples*
+
+>
+        set tabline=%!MakeAlpacaTabLine()
+<
+
+==============================================================================
+更新履歴                                    *alpaca_powerlinetabline-changelog*
+
+0.1.0 2013-04-15
+        first commit.
+
+vim:tw=78:ts=8:ft=help:norl:noet:fen:fdl=0:
