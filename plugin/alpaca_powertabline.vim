@@ -63,7 +63,7 @@ call s:define_default_variable('g:alpaca_powertabline_colors', {
 augroup AlpacaTabline
   autocmd!
   autocmd VimEnter,ColorScheme * call alpaca_powertabline#initialize()
-        \| set tabline=%!alpaca_powertabline#create_tabline()
+        \| setl tabline=%!alpaca_powertabline#create_tabline()
 augroup END
 
 let &cpo = s:save_cpo
