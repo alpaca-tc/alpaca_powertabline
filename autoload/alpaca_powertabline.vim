@@ -37,8 +37,9 @@ function! alpaca_powertabline#create_tabline() "{{{
   let titles_len = len(join(title_array, ""))
   let tabs = join(titles, s:sep) . '%#TabLineFill#%T'
 
-  " XXX 他の人用にとりあえず
-  " return ' ' . tabs
+  if !g:alpaca_powertabline_align_center
+    return ' ' . tabs
+  endif
 
   " let info = s:get_info()
 
