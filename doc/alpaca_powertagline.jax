@@ -55,6 +55,9 @@ Author: Ishii Hiroyuki<alprhcp666@gmail.com>
                 \     "fg": 245,
                 \   },
                 \ })
+4. |g:alpaca_powertabline_align_center|
+        1を設定すると、tablineを中央寄せで表示します。
+        default: '1'
 
 ==============================================================================
 設定例                                     *alpaca_powerlinetabline-examples*

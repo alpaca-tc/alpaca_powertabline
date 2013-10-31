@@ -59,6 +59,7 @@ call s:define_default_variable('g:alpaca_powertabline_colors', {
         \   },
         \ })
 "}}}
+call s:define_default_variable('g:alpaca_powertabline_align_center', 1)
 
 augroup AlpacaTabline
   autocmd!
